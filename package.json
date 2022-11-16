@@ -1,6 +1,24 @@
 {
   "devDependencies": {
-    "@types/node": "^18.11.0",
+    "@types/node": "^18.11.9",
     "typescript": "^4.8.4"
-  }
+  },
+  "name": "learning",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M-E-Dev/Typescript-work.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M-E-Dev/Typescript-work/issues"
+  },
+  "homepage": "https://github.com/M-E-Dev/Typescript-work#readme",
+  "description": ""
 }
