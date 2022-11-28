@@ -7,6 +7,7 @@
 // @ts-ignore    (ALT SATIRDAKİ HATAYI GÖRME)
 // a=asdasd
 
+
 let myname: string | number = "Harry";    // string ya da number atanabilir sonradan
 let girlname: "buse" | "ceren" = "ceren"  // değer seçenekleriyle atama
 let age: Number = 30  // Number baş harfi büyük, class ifade ediyor.
@@ -14,6 +15,13 @@ let a: 5 | 10 | 15 = 15  // değer seçenekleriyle atama
 let b: boolean = true;
 let c: undefined = undefined;
 let d: symbol = Symbol()
+const dizi = []   // any dizisi
+const numberdizi: number[] = []   // number dizisi
+const stringdizi = [] as string[]   // string dizisi
+const karmadizi: (number | string | boolean) [] = [ ]   // karışık dizi
+// tuple, tipleri belli, sabitt sayıda öge dizisi
+const myDizi: [string, string, number] = ["Harry", "Potter", 32]  //tuple
+
 
 myname= 15    // hata vermez
 myname = "Hasan"    // hata vermez
@@ -40,3 +48,7 @@ const Person: {
     yaş: 32,
     takım: "fener"
 }
+
+let h = "Hogwarts";
+let s = h as string;    // as - string olarak kabul et
+let r = <string> h;    // <string> - string olarak kabul et
