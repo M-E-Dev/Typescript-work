@@ -7,5 +7,36 @@
 // @ts-ignore    (ALT SATIRDAKİ HATAYI GÖRME)
 // a=asdasd
 
-console.log("hello");
+let myname: string | number = "Harry";    // string ya da number atanabilir sonradan
+let girlname: "buse" | "ceren" = "ceren"  // değer seçenekleriyle atama
+let age: Number = 30  // Number baş harfi büyük, class ifade ediyor.
+let a: 5 | 10 | 15 = 15  // değer seçenekleriyle atama
+let b: boolean = true;
+let c: undefined = undefined;
+let d: symbol = Symbol()
 
+myname= 15    // hata vermez
+myname = "Hasan"    // hata vermez
+
+function check() {
+    if (typeof myname === "string") {
+       // myname. tüm string metotşları gelir
+    }
+    if (typeof myname === "number") {
+        // myname. tüm number metotşları gelir
+    }
+    if (age instanceof Number) {
+        // class olarak tanımladık, instanceof olacak
+        // myname. tüm number metotşları gelir
+    }
+}
+
+const Person: {
+    isim: string,
+    yaş: number | string,    // tip seçenekleri
+    takım: "fener" | "city"   // değer seçenekleri
+} = {
+    isim: "Harry",
+    yaş: 32,
+    takım: "fener"
+}
