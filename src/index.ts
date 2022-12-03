@@ -222,3 +222,13 @@ interface IStudent{
             sinif: IStudent["sinif"],
     }
 }
+const obj: IStudent = {
+    isim: "Harry",
+    sinif: 12,
+    getStudentInformation() {
+        return{
+            isim: this.isim,
+            sinif: this.sinif
+        }
+    },
+}
