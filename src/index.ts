@@ -67,21 +67,25 @@ import { resolve } from "path";
 
 //----------- FONKSİYONLAR ---------------
 
-// void : hiçbişey döndürmüyor
-function F() {
-    return 25
-}
-// const c = F() as string   // number return ettiği için yanlış !!!
+// // void : hiçbişey döndürmüyor
+// function F() {
+//     return 25
+// }
+// // const c = F() as string   // number return ettiği için yanlış !!!
 
-// Fonksiyonun ne döndüreceğini baştan yazalım
-function F2(): [number, string] {
-    return [25, "Harry"]
-}
+// // Fonksiyonun ne döndüreceğini baştan yazalım
+// function F2(): [number, string] {
+//     return [25, "Harry"]
+// }
 
-function LogPerson(parametreler: { isim: string; soyisim: string; yas: number }): Promise<number | string> {
+// function LogPerson(parametreler: { isim: string; soyisim: string; yas: number }): Promise<number | string> {
 
-    return new Promise((resolve, reject) => {
-        resolve(25);
-    })
+//     return new Promise((resolve, reject) => {
+//         resolve(25);
+//     })
+// }
+// LogPerson({isim:"Harry", soyisim:"Potter", yas:32})
+
+const yazmaca = () => {
+    
 }
-LogPerson({isim:"Harry", soyisim:"Potter", yas:32})
