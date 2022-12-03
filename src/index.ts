@@ -86,6 +86,139 @@ import { resolve } from "path";
 // }
 // LogPerson({isim:"Harry", soyisim:"Potter", yas:32})
 
-const yazmaca = () => {
-    
+// const yazmaca = (isim: string, tekrar: number): void => {
+//     for (let i = 0; i < tekrar; i++) {
+//         console.log(isim);
+        
+//     }
+// }
+// yazmaca("Harry", 3)
+
+
+
+//------------------------ Tip İsimlendirme / Type Aliasing ------------------------------------
+
+// type Person = {
+    //     isim: string;
+    //     soyad?: string;
+    //     yas?: string; // ? opsiyonel demektir
+    //     durum: string;
+    // }
+    // const obj: Person = {
+//     isim: "Harry",
+//     durum: "bekar"
+// }
+// const objDizi: Person[] = [{    // Person[] yaparak array yaptık
+//     isim: "Harry",
+//     durum: "bekar"
+// }]
+
+// //------------
+
+// type Colors = "red" | "green" | "blue";
+// type CustomColors = "black" | "gray" | "darkgrey";
+
+// const myColors: Colors = "blue";
+// const colorArr: (Colors | CustomColors)[] = ["blue", "green", "red", "black"]  // iki faklı type
+
+// // veya tipleri birleştirirz
+// type AllColors = Colors | CustomColors;
+// const colorArr2: AllColors[] = ["black","green"]
+
+// //------------
+// // Type objeleri birleştirme... Tüm içeriği barındırmak zorunda yeni obje
+// type Man = {
+    //     ad: string;
+    //     yas: number
+    // }
+    // type Wolf = {
+//     tur: string;
+//     yas: number
+// }
+// type WolfMan = Man & Wolf;
+
+// const WolfMan1: WolfMan = {
+    //     ad: "Harry",
+//     yas: 32,
+//     tur: "Kurt"
+// }
+
+
+
+
+// //------------------------ Modüller / Modules ------------------------------------
+
+// import type {student} from "./person"
+
+
+
+
+// //------------------------ Nesne Tiplendirme / Object Typing ------------------------------------
+
+// type MyObj = {
+    //     isim: string;
+    //     yas: number;
+    //     [key: string]: any   // Kullanıcı isim+yas dısında ekleme yapabilsin
+    // }
+    // const myObj: MyObj = {
+        //     isim: "Harry",
+        //     yas: 32,
+        //     takım: "fener",
+        //     boy: 185
+        // }
+        
+        // const myObject: Record<number, {evli:boolean}> = {    //  Record<key, value>
+        //     15: {
+//         evli: false
+//     }
+// }
+
+
+
+
+// // //------------------------ Interfaces ------------------------------------
+
+// interface MyArray {
+//     [index: number]: string | number;
+// }
+
+// const newArray: MyArray =  ["Harry", 32]
+
+
+// // //------------------------ Interface Function ---------------------------
+// interface IFunction {
+//     (isim: string | boolean, tekrar: number): string | boolean;
+// }
+
+// const myFunc: IFunction = (isim, tekrar) => {
+//     return false
+// }
+
+// // interface extending
+// interface MongoResponse {
+//     _id: string;
+//     createdAt: string;
+//     updatedAt: Date
+// }
+// interface ProductResponse extends MongoResponse {       // interface extend ile genişlettik
+//     name: string;
+//     page: number
+// }
+// const getProduct = (): ProductResponse => {
+//     return{
+//         _id: "51",
+//         createdAt: "19.11.1990",
+//         updatedAt: new Date(),
+//         name: "Harry",
+//         page: 250
+//     }
+// }
+
+interface IStudent{
+    isim: string;
+    sinif: number;
+    getStudentInformation:()=>{
+            isim: IStudent["isim"],
+            sinif: IStudent["sinif"],
+    }
 }

@@ -1,8 +1,10 @@
+"use strict";
 // npm install -g typescript
 // npm init --y (package.json içeriği)
 // +tsconfig.json (ts buna göre çalışır)
 // ts -> je'e tip desteği sağlar
 // npm install @types/node  (nodejs tipleri)
+exports.__esModule = true;
 // @ts-ignore    (ALT SATIRDAKİ HATAYI GÖRME)
 // a=asdasd
 //--------------DEĞİŞKEN TİPLERİ--------------
@@ -46,12 +48,24 @@
 // let s = h as string;    // as - string olarak kabul et
 // let r = <string> h;    // <string> - string olarak kabul et
 //----------- FONKSİYONLAR ---------------
-// void : hiçbişey döndürmüyor
-function F() {
-    return 25;
-}
-// const c = F() as string   // number return ettiği için yanlış !!!
-// Fonksiyonun ne döndüreceğini baştan yazalım
-function F2() {
-    return [25, "Harry"];
-}
+// // void : hiçbişey döndürmüyor
+// function F() {
+//     return 25
+// }
+// // const c = F() as string   // number return ettiği için yanlış !!!
+// // Fonksiyonun ne döndüreceğini baştan yazalım
+// function F2(): [number, string] {
+//     return [25, "Harry"]
+// }
+// function LogPerson(parametreler: { isim: string; soyisim: string; yas: number }): Promise<number | string> {
+//     return new Promise((resolve, reject) => {
+//         resolve(25);
+//     })
+// }
+// LogPerson({isim:"Harry", soyisim:"Potter", yas:32})
+var yazmaca = function (isim, tekrar) {
+    for (var i = 0; i < tekrar; i++) {
+        console.log(isim);
+    }
+};
+yazmaca("Harry", 3);
