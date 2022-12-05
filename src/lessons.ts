@@ -4,6 +4,7 @@
 // ts -> je'e tip desteği sağlar
 // npm install @types/node  (nodejs tipleri)
 
+import { type } from "os";
 import { resolve } from "path";
 
 // @ts-ignore    (ALT SATIRDAKİ HATAYI GÖRME)
@@ -335,3 +336,54 @@ import { resolve } from "path";
 //     }
 // }
 // sendNotification(Notification.Error)
+
+
+
+
+//---------------------------------- TİP PARAMETRELERİ --------------------------------------
+// type Todo = {
+//     userId: number,
+//     id: number,
+//     title: string,
+//     completed: boolean
+// }
+// //Todo tipi
+// const response = await makeFetch<Todo>("https://jsonplaceholder.typicode.com/todos/1");
+// response.id
+// //Todolardan oluşan array tipi
+// const response = await makeFetch<Todo[]>("https://jsonplaceholder.typicode.com/todos");
+// response[0].id
+
+// const useTimeStamp = <T extends object>(obj: T) => {
+//     return {
+//         ...obj,
+//         createdTime: Date.now()
+//     }
+// }
+
+
+
+
+
+//---------------------------------- as const, Tip Parantezleri ve Tuple --------------------------------------
+
+// let name = "Harry"                // otomatik string yaptı
+// let name2 = "Harry" as string     // string tipi
+// let name3: string = "Harry"       // string tipi 
+// let name4 = <string>"Harry"       // string tipi
+
+// interface Student {
+//     name: string;
+//     class: number;
+// }
+
+// const myObject: Student = {
+//     name: "Harry",
+//     class: 5
+// }
+// const myObject2 = <Student>{
+//     name: "Harry",
+//     class: 5
+// }
+
+// 
