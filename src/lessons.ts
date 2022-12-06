@@ -386,4 +386,83 @@ import { resolve } from "path";
 //     class: 5
 // }
 
-// 
+
+// const doesExist = (array: any[], child) => {
+//     const index = array.findIndex((value) => value === child)
+// }
+
+// const doesExist = <T extends any[] | readonly any []>(array: T, child: any) => {
+//     const index = array.findIndex(value => value === child)
+//     if (index >= 0) {
+//         return [true, index]
+//     }
+//     return [false, index]
+// }
+// const [existing, index] = doesExist(myArray, 25)
+
+
+
+
+
+
+//----------------------------------- Conditional Types -----------------------------------------------
+
+// type ToArray<T> = T;             // number döndürür
+// type C = ToArray<number>
+
+// type ToArray2<T> = T[];          // number arrayı döndürür
+// type C2 = ToArray2<number>
+
+// type ToArray3<T extends string | number | null> = T[];      // number veya string arrayı döndürebilir
+// type C3 = ToArray2<string>       // <string> olabilir, <number olabilir>
+
+// type ToArray4<T> = T extends string | number ? T[] : never    // conditional return type
+
+
+
+// // erkekse maaşını döndüren, kadınsa güzelliği döndüren, başka bişeyse döndürmeyen type
+// class Male { maas = 25000}
+// class Female { tip = 7}
+// type GetIdentifier<T> = T extends Male ? T["maas"]: T extends Female ? T["tip"] : never;
+
+// const getIdentifier = <T>(param: T): GetIdentifier<T> => {
+//     if (param instanceof Male) {
+//         return <GetIdentifier<T>>param.maas
+//     }
+//     if (param instanceof Female) {
+//         return <GetIdentifier<T>>param.tip
+//     }
+//     throw new Error("Error")
+// }
+
+
+// type MessageOf<T> = T extends {message : unknown} ? T["message"] : never;
+// const myMessage = {
+//     message: "mesaj"
+// }
+// type message = MessageOf<typeof myMessage>
+
+
+
+
+
+
+
+
+//----------------------------------- INFER -------------------------------------------------
+
+// const myFunction = () => {return 60}
+
+// type ReturnT<T> = T extends (...args: unknown[]) => infer C ? C: never;
+
+
+
+
+
+
+
+
+
+//----------------------------------- TYPE PREDICT -------------------------------------------------
+
+ 
