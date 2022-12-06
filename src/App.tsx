@@ -1,12 +1,18 @@
 import './App.css';
 import Button from './components/Button';
+import Container from './components/Container';
 import Greet from './components/Greet';
 import Heading from './components/Heading';
 import Input from './components/Input';
+import LoggedIn from './components/state/LoggedIn';
 import Oscar from './components/Oscar';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
 import Status from './components/Status';
+import User from './components/state/User';
+import Counter from './components/state/Counter';
+import { ThemeContextProvider } from './components/context/ThemeContext';
+import Box from './components/context/Box';
 
 function App() {
   // const personName = {
@@ -43,7 +49,14 @@ function App() {
         handleClick={(event, id) => {
           console.log("Button Clicked", event, id)
         }} /> */}
-      <Input value="" handleChange={(event) => console.log(event)} />
+      {/* <Input value="" handleChange={(event) => console.log(event)} /> */}
+      {/* <Container styles={{backgroundColor: "pink", padding:"1rem"}} /> */}
+      {/* <LoggedIn/> */}
+      {/* <User/> */}
+      {/* <Counter/> */}
+      <ThemeContextProvider>
+        <Box/>
+      </ThemeContextProvider>
     </div>
   );
 }

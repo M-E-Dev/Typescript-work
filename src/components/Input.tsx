@@ -4,15 +4,15 @@ type InputProps = {
 }
 
 
-const Input = (props: InputProps) => {
+const Input = ({value, handleChange}: InputProps) => {
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         console.log(event)
     }
     return <input
         type="text"
-        value={props.value}
+        value={value}
         // onChange={handleInputChange}
-        onChange={props.handleChange}
+        onChange={handleChange}
     />
 }
 

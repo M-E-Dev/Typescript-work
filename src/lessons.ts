@@ -1,3 +1,4 @@
+import { PersonProps } from './components/Person.types';
 // npm install -g typescript
 // npm init --y (package.json içeriği)
 // +tsconfig.json (ts buna göre çalışır)
@@ -142,6 +143,14 @@ import { resolve } from "path";
     //     ad: "Harry",
 //     yas: 32,
 //     tur: "Kurt"
+// }
+
+// type Name = {
+//     first: string
+//     last: string
+// }
+// type PersonProps = {     // Bu şekilde iç içe kullanabiliriz. 
+//     name: Name
 // }
 
 
